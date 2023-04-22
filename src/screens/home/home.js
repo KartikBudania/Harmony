@@ -6,11 +6,13 @@ import Trending from '../trending/trending'
 import Player from '../player/player'
 import Favorites from '../favorites/favorites'
 import './home.css'
+import Sidebar from '../../components/sidebar'
 
 export default function Home() {
   return (
     <Router>
       <div className='main-body'>
+        <Sidebar />
         <Routes>
           <Route path='/' element={<Library />} />
           <Route path='/feed' element={<Feed />} />
