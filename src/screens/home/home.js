@@ -6,7 +6,7 @@ import Trending from '../trending/trending'
 import Player from '../player/player'
 import Favorites from '../favorites/favorites'
 import './home.css'
-import Sidebar from '../../components/sidebar'
+import Sidebar from '../../components/sidebar/sidebar'
 
 export default function Home() {
   return (
