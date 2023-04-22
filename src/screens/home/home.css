@@ -1,8 +1,8 @@
 .main-body{
     height: 100vh;
     width: 100vw;
-    background-color: rgb(49, 130, 206);
-    border-radius: 25px;
+    background-color: #e99d72;
+    border-radius: 30px;
     display: flex;
     justify-content: space-between;
 }
