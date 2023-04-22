@@ -1,8 +1,11 @@
 import React from 'react';
+import Home from './screens/home';
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <div>
+      <Home />
+    </div>
   );
 }
 
