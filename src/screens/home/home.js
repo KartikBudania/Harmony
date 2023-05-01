@@ -28,8 +28,6 @@ export default function Home() {
     }
   }, [])
 
-  console.log(token)
-
   return !token ? (
     <Login />
   ) : (
