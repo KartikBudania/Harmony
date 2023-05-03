@@ -10,7 +10,7 @@
 
 .playlist-card{
     width: 15%;
-    height: 35%;
+    height: fit-content;
     border-radius: 20px;
     background: rgb(30, 42, 62);
     border: 1px solid rgba(54, 69, 98, 0.18);
@@ -21,4 +21,28 @@
         rgb(40,58,88) 0%,
         rgba(54,69,98,0) 100%
     );
+    transition: all 0.2s ease;
+}
+
+.playlist-card:hover{
+    transform: scale(1.02);
+}
+
+.playlist-image{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.playlist-title{
+    font-weight: 800;
+    font-size: 16px;
+    color: #c4d0e3;
+    margin: 10px 0px 10px;
+}
+
+.playlist-subtitle{
+    font-weight: 400;
+    font-size: 12px;
+    color: #c4d0e37c;
+    margin: 0px;
 }
