@@ -28,6 +28,10 @@
     transform: scale(1.02);
 }
 
+.playlist-card:hover .playlist-fade{
+    opacity: 1;
+}
+
 .playlist-image{
     width: 100%;
     border-radius: 15px;
@@ -45,4 +49,23 @@
     font-size: 12px;
     color: #c4d0e37c;
     margin: 0px;
+}
+
+.playlist-fade{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 84%;
+    height: 34%;
+    border-radius: 20px;
+    background: linear-gradient(
+        180deg,
+        rgba(54,69,98,0),
+        rgba(54,69,98,1)
+    );
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 8%;
 }
