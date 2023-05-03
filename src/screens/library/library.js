@@ -16,7 +16,15 @@ export default function Library() {
     <div className="screen-container">
       <div className="library-body">
         {playlists?.map((playlist) => (
-          <div className="playlist-card">{playlist.name}</div>
+          <div className="playlist-card">
+            <img 
+                src={playlist.images[0].url} 
+                className="playlist-image" 
+                alt="Playlist-Art"
+             />
+            <p className="playlist-title">{playlist.name}</p>
+            <p className="playlist-subtitle">{playlist.tracks.total} Songs</p>
+          </div>
         ))}
       </div>
     </div>
