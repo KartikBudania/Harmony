@@ -9,6 +9,7 @@
 }
 
 .playlist-card{
+    position: relative;
     width: 15%;
     height: fit-content;
     border-radius: 20px;
