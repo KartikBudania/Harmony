@@ -7,3 +7,7 @@
 opacity: 1;
 background-image:  repeating-radial-gradient( circle at center left, transparent 0, #1e2a3e 100px ), repeating-linear-gradient( #23365655, #233656 );
 }
+
+.flex{
+    display: flex;
+}
