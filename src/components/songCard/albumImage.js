@@ -3,7 +3,7 @@ import './albumImage.css'
 
 export default function AlbumImage({url}) {
   return (
-    <div>
+    <div className='albumImage-card'>
         <div className='albumImage flex'>
             <img src={url} alt='album art' className='albumImage-art' />
             <div className='albumImage-shadow'>

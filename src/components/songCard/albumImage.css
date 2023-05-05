@@ -1,3 +1,10 @@
+.albumImage-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .albumImage{
     width: 80%;
     align-items: center;
