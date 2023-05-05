@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 80%;
 }
 
 .albumInfo-card p{
@@ -12,19 +13,50 @@
 }
 
 .albumName-container{
+    width: 100%;
     font-size: 20px;
     font-weight: 700;
     color: #c3d0e3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.marquee{
+    white-space: nowrap;
+    display: inline-block;
+    animation: marquee 12s linear infinite;
+    padding-left: 100%;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .album-info{
     font-size: 14px;
     font-weight: 500;
-    color: #c3d0e3;
+    color: #9aa9c2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .album-release{
     font-size: 12px;
     font-weight: 400;
-    color: #c3d0e3;
+    color: #9aa9c2;
+    margin-top: 10px;
 }
