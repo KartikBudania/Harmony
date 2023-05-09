@@ -13,7 +13,7 @@ export default function Queue({tracks, setCurrentIndex}) {
             tracks?.map((track) => (
               <div className='queue-item flex'>
                 <p className='track-name'>{track?.track?.name}</p>
-                <p>{Math.floor((track?.track?.duration_ms)/1000/60)}:{(Math.floor(((track?.track?.duration_ms)/1000)%60)) < 10 ? `0${(Math.floor(((track?.track?.duration_ms)/1000)%60))}`: `${(Math.floor(((track?.track?.duration_ms)/1000)%60))}`}</p>
+                <p className='track-duration'>{Math.floor((track?.track?.duration_ms)/1000/60)}:{(Math.floor(((track?.track?.duration_ms)/1000)%60)) < 10 ? `0${(Math.floor(((track?.track?.duration_ms)/1000)%60))}`: `${(Math.floor(((track?.track?.duration_ms)/1000)%60))}`}</p>
               </div>
             ))
           }

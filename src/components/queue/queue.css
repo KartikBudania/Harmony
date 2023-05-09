@@ -52,10 +52,14 @@
 }
 
 .queue-item p{
+    padding-right: 4px;
     margin: 0px;
 }
 
 .track-name{
     width: 75%;
     text-overflow: ellipsis;
+}
+
+.track-duration{
 }
