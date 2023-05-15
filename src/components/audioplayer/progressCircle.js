@@ -40,6 +40,32 @@ export default function ProgressCircle({
             size={size}
           />
         </g>
+        <defs>
+          <clipPath id="myCircle">
+            <circle cx='50%' cy='50%' r={size/2 -30} fill="#ffffff" />
+          </clipPath>
+          <clipPath id="myInnerCircle">
+            <circle cx='50%' cy='50%' r={size/2 -100} fill="#ffffff" />
+          </clipPath>
+        </defs>
+        <image
+          className={isPlaying ? 'active' : ''}
+          x={30}
+          y={30}
+          width={2*(size/2 -30)}
+          height={2*(size/2 -30)}
+          href="https://pngimg.com/uploads/vinyl/vinyl_PNG107.png"
+          clipPath="url(#myCircle)"
+        />
+        <image
+          className={isPlaying ? 'active' : ''}
+          x={100}
+          y={100}
+          width={2*(size/2 -100)}
+          height={2*(size/2 -100)}
+          href={image}
+          clipPath="url(#myInnerCircle)"
+        />
       </svg>
     </div>
   );
