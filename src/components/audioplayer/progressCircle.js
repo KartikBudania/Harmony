@@ -29,7 +29,7 @@ export default function ProgressCircle({
   color,
 }) {
   return (
-    <div className="progress-circle">
+    <div className="progress-circle flex">
       <svg width={size} height={size}>
         <g>
           <Circle strokeWidth={"0.4rem"} color="#3B4F73" size={size} />
