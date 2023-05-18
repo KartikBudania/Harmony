@@ -26,7 +26,7 @@ export default function AudioPlayer({currentTrack}) {
           <div className='player-right-bottom flex'>
           <div className='song-duration flex'>
             <p className='duration'>0:01</p>
-            <WaveAnimation />
+            <WaveAnimation isPlaying={true} />
             <p className='duration'>0:30</p>
           </div>
           <Controls 
