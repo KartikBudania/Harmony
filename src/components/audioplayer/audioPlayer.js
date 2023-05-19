@@ -10,77 +10,76 @@ export default function AudioPlayer({
   setCurrentIndex,
   total,
 }) {
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [trackProgress, setTrackProgress] = useState(0);
+  var audioSrc = total[currentIndex]?.track.preview_url;
 
-  const [isPlaying, setIsPlaying] = useState(true)
-  const [trackProgress, setTrackProgress] = useState(0)
-  var audioSrc = total[currentIndex]?.track.preview_url
+  const audioRef = useRef(new Audio(total[0]?.track.preview_url));
 
-  const audioRef = useRef(new Audio(total[0]?.track.preview_url))
+  const intervalRef = useRef();
 
-  const intervalRef = useRef()
+  const isReady = useRef(false);
 
-  const isReady = useRef(false)
+  const { duration } = audioRef.current;
 
-  const {duration} = audioRef.current
-
-  const currentPercentage = duration ? (trackProgress/duration)*100 : 0
+  const currentPercentage = duration ? (trackProgress / duration) * 100 : 0;
 
   const startTimer = () => {
-    clearInterval(intervalRef.current)
+    clearInterval(intervalRef.current);
 
     intervalRef.current = setInterval(() => {
-      if(audioRef.current.ended){
-        handleNext()
-      }else{
-        setTrackProgress(audioRef.current.currentTime)
+      if (audioRef.current.ended) {
+        handleNext();
+      } else {
+        setTrackProgress(audioRef.current.currentTime);
       }
     }, [1000]);
-  }
+  };
 
   useEffect(() => {
-    if(isPlaying && audioRef.current){
-      audioRef.current = new Audio(audioSrc)
-      audioRef.current.play()
-      startTimer()
-    }else{
-      clearInterval(intervalRef.current)
-      audioRef.current.pause()
+    if (isPlaying && audioRef.current) {
+      audioRef.current = new Audio(audioSrc);
+      audioRef.current.play();
+      startTimer();
+    } else {
+      clearInterval(intervalRef.current);
+      audioRef.current.pause();
     }
-  }, [isPlaying])
+  }, [isPlaying]);
 
   useEffect(() => {
-    audioRef.current.pause()
-    audioRef.current = new Audio(audioSrc)
+    audioRef.current.pause();
+    audioRef.current = new Audio(audioSrc);
 
-    setTrackProgress(audioRef.current.currentTime)
+    setTrackProgress(audioRef.current.currentTime);
 
-    if(isReady.current){
-      audioRef.current.play()
-      setIsPlaying(true)
-      startTimer()
-    }else{
+    if (isReady.current) {
+      audioRef.current.play();
+      setIsPlaying(true);
+      startTimer();
+    } else {
       isReady.current = true;
     }
-  }, [currentIndex])
+  }, [currentIndex]);
 
   useEffect(() => {
     return () => {
-      audioRef.current.pause()
-      clearInterval(intervalRef.current)
-    }
-  }, [])
+      audioRef.current.pause();
+      clearInterval(intervalRef.current);
+    };
+  }, []);
 
   const handleNext = () => {
-    if(currentIndex < total.length - 1){
-      setCurrentIndex(currentIndex + 1)
-    }else setCurrentIndex(0)
-  }
+    if (currentIndex < total.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    } else setCurrentIndex(0);
+  };
 
   const handlePrev = () => {
-    if(currentIndex - 1 < 0){
-      setCurrentIndex(total.length - 1)
-    }else setCurrentIndex(currentIndex - 1)
-  }
+    if (currentIndex - 1 < 0) {
+      setCurrentIndex(total.length - 1);
+    } else setCurrentIndex(currentIndex - 1);
+  };
 
   const artists = [];
   currentTrack?.album?.artists.forEach((artist) => {
@@ -102,7 +101,12 @@ export default function AudioPlayer({
         <p className="song-artist">{artists.join(" | ")}</p>
         <div className="player-right-bottom flex">
           <div className="song-duration flex">
-            <p className="duration">0:{(Math.round(trackProgress))<10 ? `0${Math.round(trackProgress)}` : `${Math.round(trackProgress)}`}</p>
+            <p className="duration">
+              0:
+              {Math.round(trackProgress) < 10
+                ? `0${Math.round(trackProgress)}`
+                : `${Math.round(trackProgress)}`}
+            </p>
             <WaveAnimation isPlaying={true} />
             <p className="duration">0:30</p>
           </div>
