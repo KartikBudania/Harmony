@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Harmony/static/css/main.803faa37.css",
+    "main.js": "/Harmony/static/js/main.37ec0096.js",
+    "index.html": "/Harmony/index.html",
+    "main.803faa37.css.map": "/Harmony/static/css/main.803faa37.css.map",
+    "main.37ec0096.js.map": "/Harmony/static/js/main.37ec0096.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.803faa37.css",
+    "static/js/main.37ec0096.js"
+  ]
+}
