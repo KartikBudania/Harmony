@@ -1,6 +1,6 @@
 .player-body{
     width: 100%;
-    height: 44%;
+    height: 40%;
     margin: 3% 0%;
 }
 
@@ -9,15 +9,15 @@
 }
 
 .player-right-body{
-    width: 67%;
+    width: 63%;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
 .song-title{
     text-align: center;
-    font-size: 58px;
+    font-size: 43px;
     font-weight: bold;
     margin: 0px;
     color: #c4d0e3;
