@@ -37,13 +37,23 @@ export default function AudioPlayer({
   };
 
   useEffect(() => {
-    if (isPlaying && audioRef.current) {
-      audioRef.current = new Audio(audioSrc);
-      audioRef.current.play();
-      startTimer();
-    } else {
-      clearInterval(intervalRef.current);
-      audioRef.current.pause();
+    if(audioRef.current){
+      if (isPlaying) {
+        audioRef.current.play();
+        startTimer();
+      } else {
+        clearInterval(intervalRef.current);
+        audioRef.current.pause();
+      }
+    }else{
+      if (isPlaying) {
+        audioRef.current = new Audio(audioSrc);
+        audioRef.current.play();
+        startTimer();
+      } else {
+        clearInterval(intervalRef.current);
+        audioRef.current.pause();
+      }
     }
   }, [isPlaying]);
 
@@ -107,7 +117,7 @@ export default function AudioPlayer({
                 ? `0${Math.round(trackProgress)}`
                 : `${Math.round(trackProgress)}`}
             </p>
-            <WaveAnimation isPlaying={true} />
+            <WaveAnimation isPlaying={isPlaying} />
             <p className="duration">0:30</p>
           </div>
           <Controls
