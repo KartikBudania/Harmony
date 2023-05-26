@@ -7,11 +7,10 @@ import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
 import { MdSpaceDashboard } from "react-icons/md";
 import apiClient from "../../spotify";
+import pic from "./musical-notes.png"
 
 export default function Sidebar() {
-  const [image, setImage] = useState(
-    "https://www.whoa.in/download/beautiful-girl-image-for-profile-picture-stock-photos"
-  );
+  const [image, setImage] = useState(pic);
 
   useEffect(() => {
     apiClient.get("me").then((response) => {
