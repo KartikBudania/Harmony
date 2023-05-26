@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Harmony/static/css/main.fb167b6e.css",
-    "main.js": "/Harmony/static/js/main.37829cd7.js",
+    "main.js": "/Harmony/static/js/main.6ca03b50.js",
     "index.html": "/Harmony/index.html",
     "main.fb167b6e.css.map": "/Harmony/static/css/main.fb167b6e.css.map",
-    "main.37829cd7.js.map": "/Harmony/static/js/main.37829cd7.js.map"
+    "main.6ca03b50.js.map": "/Harmony/static/js/main.6ca03b50.js.map"
   },
   "entrypoints": [
     "static/css/main.fb167b6e.css",
-    "static/js/main.37829cd7.js"
+    "static/js/main.6ca03b50.js"
   ]
 }
