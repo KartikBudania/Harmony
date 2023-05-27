@@ -3,11 +3,11 @@ import "./sidebar.css";
 import SidebarButton from "./sidebarButton";
 import { MdFavorite } from "react-icons/md";
 import { FaGripfire, FaPlay } from "react-icons/fa";
-import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
 import { MdSpaceDashboard } from "react-icons/md";
 import apiClient from "../../spotify";
 import pic from "./musical-notes.png"
+import SignOut from "./signOut";
 
 export default function Sidebar() {
   const [image, setImage] = useState(pic);
@@ -32,7 +32,7 @@ export default function Sidebar() {
         />
         <SidebarButton title="Library" to="/" icon={<IoLibrary />} />
       </div>
-      <SidebarButton title="Sign Out" to="" icon={<FaSignOutAlt />} />
+      <SignOut />
     </div>
   );
 }
