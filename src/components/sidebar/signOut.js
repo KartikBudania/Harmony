@@ -6,7 +6,7 @@ import "./signOut.css";
 export default function SignOut() {
   function signOut(){
     localStorage.removeItem('token');
-    window.location.reload();
+    window.location.href = 'https://kartikbudania.github.io/Harmony/';
   }
 
   return (
