@@ -4,9 +4,9 @@ import { FaSignOutAlt } from "react-icons/fa";
 import "./signOut.css";
 
 export default function SignOut() {
-  function signOut(){
-    localStorage.removeItem('token');
-    window.location.href = 'https://kartikbudania.github.io/Harmony/';
+  function signOut() {
+    localStorage.removeItem("token");
+    window.location.href = "https://kartikbudania.github.io/Harmony/";
   }
 
   return (
