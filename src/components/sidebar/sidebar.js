@@ -6,7 +6,7 @@ import { FaGripfire, FaPlay } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
 import { MdSpaceDashboard } from "react-icons/md";
 import apiClient from "../../spotify";
-import pic from "./musical-notes.png"
+import pic from "./musical-notes.png";
 import SignOut from "./signOut";
 
 export default function Sidebar() {
