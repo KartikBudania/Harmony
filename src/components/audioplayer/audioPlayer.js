@@ -37,7 +37,7 @@ export default function AudioPlayer({
   };
 
   useEffect(() => {
-    if(audioRef.current){
+    if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.play();
         startTimer();
@@ -45,7 +45,7 @@ export default function AudioPlayer({
         clearInterval(intervalRef.current);
         audioRef.current.pause();
       }
-    }else{
+    } else {
       if (isPlaying) {
         audioRef.current = new Audio(audioSrc);
         audioRef.current.play();
