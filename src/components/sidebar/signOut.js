@@ -7,6 +7,7 @@ export default function SignOut() {
   function signOut() {
     localStorage.removeItem("token");
     window.location.href = "https://kartikbudania.github.io/Harmony/";
+    // window.location.href = "http://localhost:3000";
   }
 
   return (
