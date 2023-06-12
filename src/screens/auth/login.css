@@ -27,3 +27,11 @@
 a {
   text-decoration: none;
 }
+
+.note{
+  color: #fefefe;
+  margin-left: 60px;
+  margin-right: 60px;
+  position: absolute;
+  bottom: 0px;
+}
