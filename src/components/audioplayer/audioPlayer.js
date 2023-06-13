@@ -109,6 +109,7 @@ export default function AudioPlayer({
       <div className="player-right-body flex">
         <p className="song-title">{currentTrack?.name}</p>
         <p className="song-artist">{artists.join(" | ")}</p>
+        { audioSrc=== null ? <p className="song-artist">Spotify doesn't provide Audio Source for this song. Please move to the next song</p> : null}
         <div className="player-right-bottom flex">
           <div className="song-duration flex">
             <p className="duration">
